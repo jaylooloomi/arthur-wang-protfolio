@@ -26,11 +26,11 @@ void main(){
   vec4 data = texture2D(uPositions, vUv);
   vec3 pos = data.xyz;
   float life = data.w;
-  vec3 vel = curlNoise(pos * 0.16 + vec3(0.0, 0.0, uTime * 0.03));
-  vel += curlNoise(pos * 0.45 + 7.0) * 0.4;
-  pos += vel * uDelta * 1.1;
+  vec3 vel = curlNoiseRaw(pos * 0.16 + vec3(0.0, 0.0, uTime * 0.03));
+  vel += curlNoiseRaw(pos * 0.45 + 7.0) * 0.4;
+  pos += vel * uDelta * 0.8;
   life += uDelta;
-  if (life > 7.0 || length(pos) > 9.0) {
+  if (life > 3.2 || length(pos) > 9.0) {
     pos = texture2D(uOriginal, vUv).xyz;
     life = 0.0;
   }
@@ -61,7 +61,7 @@ void main(){
   vec2 c = gl_PointCoord - 0.5;
   if (length(c) > 0.5) discard;
   float a = smoothstep(0.5, 0.0, length(c));
-  float t = clamp(vLife / 7.0, 0.0, 1.0);
+  float t = clamp(vLife / 3.2, 0.0, 1.0);
   float fade = smoothstep(0.0, 0.12, t) * smoothstep(1.0, 0.7, t); // 生滅淡入淡出
   vec3 col = mix(uColorA, uColorB, sin(t * 3.14159));
   gl_FragColor = vec4(col * 1.35, a * fade);
@@ -85,7 +85,7 @@ export default function GpgpuParticles({ size = 256 }) {
       data[i * 4] = v.x
       data[i * 4 + 1] = v.y
       data[i * 4 + 2] = v.z
-      data[i * 4 + 3] = Math.random() * 7.0 // 起始壽命錯開
+      data[i * 4 + 3] = Math.random() * 3.2 // 起始壽命錯開
     }
     const tex = new THREE.DataTexture(data, size, size, THREE.RGBAFormat, THREE.FloatType)
     tex.needsUpdate = true

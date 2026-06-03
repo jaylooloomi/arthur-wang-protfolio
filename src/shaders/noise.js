@@ -39,4 +39,15 @@ vec3 curlNoise(vec3 p){
   float z=(p_x1.y-p_x0.y)-(p_y1.x-p_y0.x);
   return normalize(vec3(x,y,z)*(1.0/(2.0*e)));
 }
+// 未正規化版（真正無散度，迭代平流不會塌縮成點）
+vec3 curlNoiseRaw(vec3 p){
+  const float e=0.1; vec3 dx=vec3(e,0.0,0.0),dy=vec3(0.0,e,0.0),dz=vec3(0.0,0.0,e);
+  vec3 p_x0=snoiseVec3(p-dx),p_x1=snoiseVec3(p+dx);
+  vec3 p_y0=snoiseVec3(p-dy),p_y1=snoiseVec3(p+dy);
+  vec3 p_z0=snoiseVec3(p-dz),p_z1=snoiseVec3(p+dz);
+  float x=(p_y1.z-p_y0.z)-(p_z1.y-p_z0.y);
+  float y=(p_z1.x-p_z0.x)-(p_x1.z-p_x0.z);
+  float z=(p_x1.y-p_x0.y)-(p_y1.x-p_y0.x);
+  return vec3(x,y,z)*(1.0/(2.0*e));
+}
 `
