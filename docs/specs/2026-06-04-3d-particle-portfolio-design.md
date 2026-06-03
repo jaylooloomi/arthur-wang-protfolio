@@ -1,7 +1,7 @@
 # 3D Particle & Scroll-Driven Portfolio — 規劃文件 (Design Spec)
 
 **日期**：2026-06-04
-**狀態**：已核准，實作中
+**狀態**：✅ 已完成並通過 Playwright 視覺驗證（Phase 1/2/3/5 + WebGL 降級）
 **作者**：Arthur + Claude
 
 ---
