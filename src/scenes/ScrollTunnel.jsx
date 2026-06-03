@@ -21,8 +21,8 @@ const SHOWCASES = [
     x: -2.6,
     targetSize: 3.4,
     spin: 0.35,
-    title: 'AERODYNE',
-    subtitle: 'Concept Vehicle · WebGL',
+    title: 'AI 落地服務',
+    subtitle: 'AI Implementation',
   },
   {
     url: '/models/RobotExpressive.glb',
@@ -30,8 +30,8 @@ const SHOWCASES = [
     x: 2.6,
     targetSize: 3.2,
     spin: 0.5,
-    title: 'UNIT-07',
-    subtitle: 'Autonomous Mech · R3F',
+    title: '智慧製造自動化',
+    subtitle: 'Smart Manufacturing',
   },
   {
     url: '/models/ToyCar.glb',
@@ -39,8 +39,8 @@ const SHOWCASES = [
     x: -2.4,
     targetSize: 3.0,
     spin: 0.6,
-    title: 'KINETIC',
-    subtitle: 'Precision Machine · GLSL',
+    title: '網頁特效 · 自動化',
+    subtitle: 'WebGL · Automation',
   },
 ]
 
@@ -62,7 +62,7 @@ export default function ScrollTunnel() {
         <mesh key={i} position={[0, 0, r.z]} rotation={[0, 0, r.rot]}>
           <torusGeometry args={[5.4, 0.03, 8, 64]} />
           <meshBasicMaterial
-            color={new THREE.Color().setHSL(0.5 + r.hue * 0.1, 0.9, 0.6)}
+            color={new THREE.Color().setHSL(0.08 + r.hue * 0.42, 0.9, 0.6)}
             toneMapped={false}
           />
         </mesh>

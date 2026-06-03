@@ -23,7 +23,7 @@ export default function LogoExplosion({ url = '/models/DamagedHelmet.glb' }) {
       uTime: { value: 0 },
       uProgress: { value: 0 },
       uSize: { value: 1.3 },
-      uColor: { value: new THREE.Color(0x00ffcc) },
+      uColor: { value: new THREE.Color(0xffb24d) },
     }),
     [],
   )

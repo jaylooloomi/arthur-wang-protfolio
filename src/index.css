@@ -11,10 +11,26 @@ body,
   padding: 0;
   width: 100%;
   height: 100%;
-  background: #04060a;
-  color: #e6f7ff;
+  background: #0a0806;
+  color: #f6efe6;
   font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
   overflow: hidden;
+}
+
+/* 標題用 Space Grotesk（科技感） */
+.font-display {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* drei <Scroll html> 內的玻璃面板 */
+.glass {
+  background: linear-gradient(135deg, rgba(20, 14, 6, 0.72), rgba(10, 8, 6, 0.55));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 178, 77, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(255, 150, 40, 0.08);
 }
 
 /* The drei <ScrollControls> creates its own scroll container; we just keep the

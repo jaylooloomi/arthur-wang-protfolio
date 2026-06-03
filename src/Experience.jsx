@@ -2,10 +2,11 @@ import { Suspense } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
-import { Stars, Loader, ScrollControls, useScroll, Environment } from '@react-three/drei'
+import { Stars, Loader, ScrollControls, Scroll, useScroll, Environment } from '@react-three/drei'
 import LogoExplosion from './scenes/LogoExplosion'
 import ScrollTunnel from './scenes/ScrollTunnel'
 import SciFiCore from './scenes/SciFiCore'
+import Content from './components/Content'
 
 // 相機飛行軌道：依滾動進度沿 -Z 穿過隧道，輕微左右擺動增加動感
 const CAM_START_Z = 9
@@ -42,22 +43,25 @@ export default function Experience() {
         }}
         camera={{ position: [0, 0, CAM_START_Z], fov: 55 }}
       >
-        <color attach="background" args={['#04060a']} />
-        <fog attach="fog" args={['#04060a', 18, 60]} />
+        <color attach="background" args={['#0a0806']} />
+        <fog attach="fog" args={['#0a0806', 18, 60]} />
 
-        <ambientLight intensity={0.4} />
-        <pointLight position={[6, 6, 8]} intensity={2.2} color="#00ffcc" />
-        <pointLight position={[-6, -3, 4]} intensity={1.2} color="#3366ff" />
+        <ambientLight intensity={0.45} />
+        <pointLight position={[6, 6, 8]} intensity={2.4} color="#ffb24d" />
+        <pointLight position={[-6, -3, 4]} intensity={1.1} color="#38e0d0" />
 
         <Suspense fallback={null}>
           <Environment preset="night" />
           <Stars radius={80} depth={50} count={2600} factor={3.4} saturation={0} fade speed={0.4} />
 
-          <ScrollControls pages={5} damping={0.25}>
+          <ScrollControls pages={6} damping={0.25}>
             <Rig />
             <LogoExplosion />
             <ScrollTunnel />
             <SciFiCore position={[0, 0, -54]} />
+            <Scroll html>
+              <Content />
+            </Scroll>
           </ScrollControls>
         </Suspense>
 

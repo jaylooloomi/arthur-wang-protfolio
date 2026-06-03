@@ -16,23 +16,23 @@ function makeLabelTexture(title, subtitle, index) {
   ctx.fillStyle = 'rgba(4, 14, 18, 0.92)'
   ctx.fillRect(0, 0, w, h)
 
-  // 內側青色邊框
-  ctx.strokeStyle = 'rgba(0, 255, 220, 0.9)'
+  // 內側琥珀金邊框
+  ctx.strokeStyle = 'rgba(255, 178, 77, 0.95)'
   ctx.lineWidth = 6
   ctx.strokeRect(28, 28, w - 56, h - 56)
 
   // 角標數字
-  ctx.fillStyle = 'rgba(0, 255, 220, 0.85)'
-  ctx.font = 'bold 64px Inter, sans-serif'
+  ctx.fillStyle = 'rgba(255, 190, 100, 0.9)'
+  ctx.font = 'bold 64px "Space Grotesk", Inter, sans-serif'
   ctx.fillText(String(index).padStart(2, '0'), 60, 120)
 
   // 標題
-  ctx.fillStyle = '#eafffb'
-  ctx.font = 'bold 96px Inter, sans-serif'
+  ctx.fillStyle = '#fff6e9'
+  ctx.font = 'bold 90px "Space Grotesk", Inter, sans-serif'
   ctx.fillText(title, 60, h / 2 + 20)
 
   // 副標
-  ctx.fillStyle = 'rgba(150, 240, 230, 0.75)'
+  ctx.fillStyle = 'rgba(255, 210, 150, 0.8)'
   ctx.font = '40px Inter, sans-serif'
   ctx.fillText(subtitle, 60, h / 2 + 90)
 
