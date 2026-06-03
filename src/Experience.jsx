@@ -5,6 +5,7 @@ import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { Stars, Loader, ScrollControls, useScroll, Environment } from '@react-three/drei'
 import LogoExplosion from './scenes/LogoExplosion'
 import ScrollTunnel from './scenes/ScrollTunnel'
+import SciFiCore from './scenes/SciFiCore'
 
 // 相機飛行軌道：依滾動進度沿 -Z 穿過隧道，輕微左右擺動增加動感
 const CAM_START_Z = 9
@@ -56,6 +57,7 @@ export default function Experience() {
             <Rig />
             <LogoExplosion />
             <ScrollTunnel />
+            <SciFiCore position={[0, 0, -54]} />
           </ScrollControls>
         </Suspense>
 
