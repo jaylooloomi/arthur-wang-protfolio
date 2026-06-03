@@ -41,8 +41,8 @@ export default function SciFiCore({ position = [0, 0, -54] }) {
   useLayoutEffect(() => {
     const mesh = meshRef.current
     if (!mesh) return
-    const cyan = new THREE.Color().setRGB(1.9, 1.15, 0.3) // HDR 琥珀金
-    const violet = new THREE.Color().setRGB(0.15, 1.6, 1.5) // HDR 青
+    const cyan = new THREE.Color().setRGB(0.1, 1.7, 1.5) // HDR 青
+    const violet = new THREE.Color().setRGB(0.85, 0.4, 1.9) // HDR 紫
 
     for (let i = 0; i < TOTAL; i++) {
       const strand = i < PER_STRAND ? 0 : 1
@@ -98,8 +98,8 @@ export default function SciFiCore({ position = [0, 0, -54] }) {
         </instancedMesh>
       </group>
 
-      <pointLight intensity={9} distance={24} color="#ffc15c" />
-      <pointLight position={[0, 6, 2]} intensity={4} distance={18} color="#5ff0e6" />
+      <pointLight intensity={9} distance={24} color="#7af6ff" />
+      <pointLight position={[0, 6, 2]} intensity={4} distance={18} color="#b58cff" />
     </group>
   )
 }

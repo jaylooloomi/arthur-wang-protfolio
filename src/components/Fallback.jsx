@@ -12,15 +12,15 @@ export default function Fallback() {
     'CAD/CAM 二次開發 · Legacy 現代化',
   ]
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center gap-6 overflow-auto bg-[#0a0806] px-8 py-12 text-center text-amber-50">
+    <div className="fixed inset-0 flex flex-col items-center justify-center gap-6 overflow-auto bg-[#04060a] px-8 py-12 text-center text-cyan-50">
       <div>
-        <h1 className="font-display text-4xl font-bold text-amber-200">王鼎傑 · Arthur Wang</h1>
-        <p className="mt-2 text-sm tracking-[0.25em] text-amber-100/60">技術總監 · 紅絲科技</p>
+        <h1 className="font-display text-4xl font-bold text-cyan-200">王鼎傑 · Arthur Wang</h1>
+        <p className="mt-2 text-sm tracking-[0.25em] text-cyan-100/60">技術總監 · 宏思科技</p>
       </div>
-      <p className="max-w-md text-amber-100/70">
+      <p className="max-w-md text-cyan-100/70">
         機械精密製造 × 軟體雲端架構，專注把 AI 與創意技術落地到企業流程。
       </p>
-      <ul className="grid max-w-lg grid-cols-1 gap-2 text-left text-sm text-amber-100/70 sm:grid-cols-2">
+      <ul className="grid max-w-lg grid-cols-1 gap-2 text-left text-sm text-cyan-100/70 sm:grid-cols-2">
         {services.map((s) => (
           <li key={s}>• {s}</li>
         ))}
@@ -28,7 +28,7 @@ export default function Fallback() {
       <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
         <a
           href="mailto:jaylooloomi@gmail.com"
-          className="rounded-full bg-amber-400 px-6 py-2 font-semibold text-black"
+          className="rounded-full bg-cyan-400 px-6 py-2 font-semibold text-black"
         >
           ✉ jaylooloomi@gmail.com
         </a>

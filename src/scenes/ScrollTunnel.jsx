@@ -62,7 +62,7 @@ export default function ScrollTunnel() {
         <mesh key={i} position={[0, 0, r.z]} rotation={[0, 0, r.rot]}>
           <torusGeometry args={[5.4, 0.03, 8, 64]} />
           <meshBasicMaterial
-            color={new THREE.Color().setHSL(0.08 + r.hue * 0.42, 0.9, 0.6)}
+            color={new THREE.Color().setHSL(0.5 + r.hue * 0.1, 0.9, 0.6)}
             toneMapped={false}
           />
         </mesh>

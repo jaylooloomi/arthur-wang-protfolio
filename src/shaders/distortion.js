@@ -35,7 +35,7 @@ void main() {
   float bx = smoothstep(0.0, 0.06, uv.x) * smoothstep(1.0, 0.94, uv.x);
   float by = smoothstep(0.0, 0.06, uv.y) * smoothstep(1.0, 0.94, uv.y);
   float inner = bx * by;
-  vec3 edgeGlow = vec3(1.5, 0.9, 0.25) * (1.0 - inner);
+  vec3 edgeGlow = vec3(0.0, 1.4, 1.2) * (1.0 - inner);
 
   vec3 col = tex.rgb + edgeGlow;
   float alpha = max(tex.a, (1.0 - inner) * 0.85);

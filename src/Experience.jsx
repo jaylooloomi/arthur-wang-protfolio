@@ -43,12 +43,12 @@ export default function Experience() {
         }}
         camera={{ position: [0, 0, CAM_START_Z], fov: 55 }}
       >
-        <color attach="background" args={['#0a0806']} />
-        <fog attach="fog" args={['#0a0806', 18, 60]} />
+        <color attach="background" args={['#04060a']} />
+        <fog attach="fog" args={['#04060a', 18, 60]} />
 
-        <ambientLight intensity={0.45} />
-        <pointLight position={[6, 6, 8]} intensity={2.4} color="#ffb24d" />
-        <pointLight position={[-6, -3, 4]} intensity={1.1} color="#38e0d0" />
+        <ambientLight intensity={0.4} />
+        <pointLight position={[6, 6, 8]} intensity={2.2} color="#00ffcc" />
+        <pointLight position={[-6, -3, 4]} intensity={1.2} color="#3366ff" />
 
         <Suspense fallback={null}>
           <Environment preset="night" />
