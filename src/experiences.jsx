@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import CurlFlowField from './scenes/CurlFlowField'
+import GpgpuParticles from './scenes/GpgpuParticles'
 import './index.css'
 
 /**
@@ -25,10 +26,10 @@ function Demo() {
     >
       <color attach="background" args={['#02060a']} />
       <Suspense fallback={null}>
-        <CurlFlowField count={120000} radius={5} />
+        <GpgpuParticles size={256} />
       </Suspense>
       <EffectComposer>
-        <Bloom intensity={0.55} luminanceThreshold={0.5} luminanceSmoothing={0.8} mipmapBlur />
+        <Bloom intensity={0.7} luminanceThreshold={0.4} luminanceSmoothing={0.8} mipmapBlur />
       </EffectComposer>
     </Canvas>
   )
