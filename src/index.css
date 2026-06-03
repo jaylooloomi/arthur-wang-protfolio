@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #04060a;
+  color: #e6f7ff;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* The drei <ScrollControls> creates its own scroll container; we just keep the
+   page itself from scrolling so the WebGL canvas owns the viewport. */
+canvas {
+  display: block;
+  touch-action: none;
+}
