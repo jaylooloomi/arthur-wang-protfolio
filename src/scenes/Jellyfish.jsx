@@ -63,8 +63,8 @@ export default function Jellyfish() {
     () => ({
       uTime: { value: 0 },
       uSize: { value: 1.4 },
-      uColorTop: { value: new THREE.Color(0.5, 1.7, 1.9) }, // 亮青
-      uColorBot: { value: new THREE.Color(0.5, 0.25, 1.4) }, // 紫
+      uColorTop: { value: new THREE.Color(0.35, 1.9, 1.1) }, // 亮綠青
+      uColorBot: { value: new THREE.Color(0.35, 0.7, 1.4) }, // 藍青
     }),
     [],
   )

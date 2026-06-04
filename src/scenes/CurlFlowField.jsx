@@ -18,8 +18,8 @@ export default function CurlFlowField({ count = 80000, radius = 6.5 }) {
       uTime: { value: 0 },
       uSize: { value: 0.9 },
       uMouse: { value: new THREE.Vector3(999, 999, 999) },
-      uColorA: { value: new THREE.Color(0.03, 0.85, 0.22) }, // 深綠
-      uColorB: { value: new THREE.Color(0.55, 1.45, 0.7) }, // 亮綠白
+      uColorA: { value: new THREE.Color(0.03, 0.9, 0.2) }, // 深綠
+      uColorB: { value: new THREE.Color(0.45, 1.6, 0.55) }, // 亮綠
     }),
     [],
   )
@@ -73,7 +73,7 @@ export default function CurlFlowField({ count = 80000, radius = 6.5 }) {
 
       {/* 中央能量核（靠 Bloom 暈成光球） */}
       <mesh ref={coreRef}>
-        <icosahedronGeometry args={[0.55, 4]} />
+        <icosahedronGeometry args={[0.7, 4]} />
         <meshBasicMaterial color={new THREE.Color(0.4, 2.2, 0.9)} toneMapped={false} transparent opacity={0.9} blending={THREE.AdditiveBlending} />
       </mesh>
     </group>

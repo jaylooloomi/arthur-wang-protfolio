@@ -61,8 +61,11 @@ void main(){
   vec3 c2 = curlNoise(base * 0.42 + 11.3 + uTime * 0.06) * 0.45;
   vec3 disp = c1 + c2;
 
+  // 環繞 Y 軸的螺旋切向（呼應影片開場的螺旋聚能感）
+  vec3 swirl = cross(base, vec3(0.0, 1.0, 0.0)) * 0.12;
+
   float t = uTime * 0.15 + aSeed * 6.2831;
-  vec3 pos = base + disp * 1.9 + 0.12 * vec3(sin(t), cos(t * 1.3), sin(t * 0.7));
+  vec3 pos = base + disp * 1.9 + swirl + 0.12 * vec3(sin(t), cos(t * 1.3), sin(t * 0.7));
 
   // 滑鼠互動：把附近粒子推開
   vec3 toM = pos - uMouse;
