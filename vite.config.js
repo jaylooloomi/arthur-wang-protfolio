@@ -16,6 +16,7 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
         experiences: resolve(import.meta.dirname, 'experiences.html'),
+        engine: resolve(import.meta.dirname, 'engine.html'),
       },
     },
   },
